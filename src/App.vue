@@ -11,7 +11,7 @@ export default {
   name: 'App',
   data() {
     return {
-      msalRequest: {
+      tokenRequest: {
         scopes: ["user.read"]
       },
       accessToken: "",
@@ -38,7 +38,7 @@ export default {
       // no need to call graph unless further information is needed
       this.name = account.name;
 
-      msalInstance.acquireTokenSilent(this.msalRequest)
+      msalInstance.acquireTokenSilent(this.tokenRequest)
         .then(response => {
           console.log(response);
           this.accessToken = response.accessToken;

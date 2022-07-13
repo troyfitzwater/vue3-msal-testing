@@ -1,5 +1,8 @@
 import { PublicClientApplication,EventType } from "@azure/msal-browser"
 
+// let account
+// or set this to a store
+
 const msalConfig = {
     auth: {
         clientId: "<<client id from auzre>>",
